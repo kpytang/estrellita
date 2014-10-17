@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+
+Copyright 2012, Karen P. Tang, Sen Hirano
+
+This file is part of the Estrellita project
+
+This program is free software: you can redistribute it and/or
+modify it under the terms of the GNU Lesser General Public License 
+as published by the Free Software Foundation, either version 3 of 
+the License, or any later version.
+
+This program is distributed in the hope that it will be useful, 
+but WITHOUT ANY WARRANTY; without even the implied warranty of 
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the 
+GNU General Public License for more details. 
+
+You should have received a copy of the GNU Lesser General Public 
+License along with this program. If not, see
+		http://www.gnu.org/licenses/
+
+-->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:scrollbars="none"
+    >
+	<LinearLayout 
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+		android:orientation="vertical"
+		>
+	    <include 
+	       	layout="@layout/activity_header"
+	       	android:layout_width="fill_parent"
+	       	android:layout_height="@dimen/activityHeaderHeight"
+	       	/> 
+       	<View 
+			style="@style/greySeparator_thin"
+			/>
+		<LinearLayout 
+			android:id="@+id/date_header"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:orientation="vertical"
+			android:gravity="center"
+			android:layout_gravity="center"
+			android:layout_marginTop="@dimen/spacer_small"
+			android:background="@drawable/btn_with_thin_border"
+			android:paddingBottom="@dimen/spacer_large"
+			>
+			<TextView
+		   		android:id="@+id/date_header_text"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:gravity="center"
+				android:textSize="@dimen/font_regular"
+				android:textStyle="bold"
+				android:textColor="@color/white"
+				/>
+		</LinearLayout>
+       	<TextView
+       		android:id="@+id/chart_title_header"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:gravity="center"
+			android:textSize="@dimen/font_regular"
+			android:textStyle="bold"
+			/>
+		<TextView
+			android:id="@+id/chart_units_header"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:gravity="center"
+			android:textSize="@dimen/font_small"
+			/>
+		<TextView
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:gravity="left"
+			android:textSize="@dimen/font_regular"
+			android:text="Value:" 
+			/>
+		<EditText 
+       		android:id="@+id/chart_value"
+       		android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+        	android:imeOptions="actionDone"
+			/>
+		<TextView
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:gravity="left"
+			android:textSize="@dimen/font_regular"
+			android:text="Notes:" 
+			/>
+		<EditText 
+	   		style="@style/apptBigTextField"
+	   		android:id="@+id/chart_notes"
+	   		android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:minLines="5"
+			android:hint="@string/optional"
+			android:gravity="left|top"
+			/>
+		<include 
+	       	layout="@layout/button_footer"
+	       	android:layout_width="fill_parent"
+	       	android:layout_height="@dimen/buttonFooterHeight"
+	       	/> 
+	</LinearLayout>
+</ScrollView>

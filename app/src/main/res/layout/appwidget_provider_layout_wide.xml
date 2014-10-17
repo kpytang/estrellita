@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+
+Copyright 2012, Karen P. Tang, Sen Hirano
+
+This file is part of the Estrellita project
+
+This program is free software: you can redistribute it and/or
+modify it under the terms of the GNU Lesser General Public License 
+as published by the Free Software Foundation, either version 3 of 
+the License, or any later version.
+
+This program is distributed in the hope that it will be useful, 
+but WITHOUT ANY WARRANTY; without even the implied warranty of 
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the 
+GNU General Public License for more details. 
+
+You should have received a copy of the GNU Lesser General Public 
+License along with this program. If not, see
+		http://www.gnu.org/licenses/
+
+-->
+<RelativeLayout android:id="@+id/widget_body"
+	android:layout_width="fill_parent" android:layout_height="fill_parent"
+	xmlns:android="http://schemas.android.com/apk/res/android">
+	<!-- <TextView android:id="@+id/widget_title" android:layout_width="wrap_content" 
+		android:layout_height="wrap_content" android:textColor="#000000" android:paddingTop="10dip" 
+		android:text="@string/app_name" android:textSize="15sp" android:textStyle="bold" 
+		android:layout_alignParentTop="true" android:layout_centerHorizontal="true"> 
+		</TextView> -->
+
+	<ImageView
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+		android:layout_alignParentLeft="true" android:layout_alignParentTop="true"
+		android:layout_alignParentRight="true" android:layout_alignParentBottom="true"
+		android:id="@+id/widget_bgcolor"
+		android:scaleType="fitXY"
+		 />
+
+	<RelativeLayout android:id="@+id/widget_bottom_area"
+		android:layout_width="wrap_content" android:layout_height="wrap_content"
+		android:layout_alignParentRight="true" android:layout_alignParentTop="true"
+		android:padding="10dip">
+
+		<LinearLayout android:id="@+id/widget_icons"
+			android:orientation="vertical" android:layout_width="wrap_content"
+			android:layout_height="wrap_content">
+			<RelativeLayout android:layout_width="@dimen/widget_icon_size"
+				android:id="@+id/widget_reading" android:layout_margin="2dip"
+				android:layout_height="@dimen/widget_icon_size">
+				<ImageView android:layout_width="@dimen/widget_icon_size"
+					android:id="@+id/widget_icon_reading_back" android:layout_height="@dimen/widget_icon_size"
+					android:scaleType="fitXY" android:layout_centerInParent="true"
+					android:src="@drawable/yellowfull">
+				</ImageView>
+				<ImageView android:id="@+id/widget_icon_reading"
+					android:scaleType="fitXY" android:src="@drawable/reading_icon"
+					android:layout_width="@dimen/widget_icon_size"
+					android:layout_height="@dimen/widget_icon_size"
+					android:layout_centerInParent="true">
+				</ImageView>
+			</RelativeLayout>
+			<RelativeLayout android:layout_width="@dimen/widget_icon_size"
+				android:id="@+id/widget_singing" android:layout_margin="2dip"
+				android:layout_height="@dimen/widget_icon_size">
+				<ImageView android:layout_width="@dimen/widget_icon_size"
+					android:id="@+id/widget_icon_singing_back" android:layout_height="@dimen/widget_icon_size"
+					android:scaleType="fitXY" android:layout_centerInParent="true"
+					android:src="@drawable/yellowfull">
+				</ImageView>
+				<ImageView android:id="@+id/widget_icon_singing"
+					android:scaleType="fitXY" android:src="@drawable/singing_icon"
+					android:layout_width="@dimen/widget_icon_size"
+					android:layout_height="@dimen/widget_icon_size">
+				</ImageView>
+			</RelativeLayout>
+			<RelativeLayout android:layout_width="@dimen/widget_icon_size"
+				android:id="@+id/widget_talking" android:layout_margin="2dip"
+				android:layout_height="@dimen/widget_icon_size">
+				<ImageView android:layout_width="@dimen/widget_icon_size"
+					android:id="@+id/widget_icon_talking_back" android:layout_height="@dimen/widget_icon_size"
+					android:scaleType="fitXY" android:layout_centerInParent="true"
+					android:src="@drawable/yellowfull">
+				</ImageView>
+				<ImageView android:id="@+id/widget_icon_talking"
+					android:scaleType="fitXY" android:src="@drawable/talking_icon"
+					android:layout_width="@dimen/widget_icon_size"
+					android:layout_height="@dimen/widget_icon_size">
+				</ImageView>
+			</RelativeLayout>
+			<RelativeLayout android:layout_width="@dimen/widget_icon_size"
+				android:id="@+id/widget_walking" android:layout_margin="2dip"
+				android:layout_height="@dimen/widget_icon_size" android:scaleType="fitXY">
+				<ImageView android:layout_width="@dimen/widget_icon_size"
+					android:id="@+id/widget_icon_walking_back" android:layout_height="@dimen/widget_icon_size"
+					android:scaleType="fitXY" android:layout_centerInParent="true"
+					android:src="@drawable/yellowfull">
+				</ImageView>
+				<ImageView android:id="@+id/widget_icon_walking"
+					android:scaleType="fitXY" android:src="@drawable/walking_icon"
+					android:layout_width="@dimen/widget_icon_size"
+					android:layout_height="@dimen/widget_icon_size">
+				</ImageView>
+			</RelativeLayout>
+			<RelativeLayout android:layout_width="@dimen/widget_icon_size"
+				android:id="@+id/widget_tummytime" android:layout_margin="2dip"
+				android:layout_height="@dimen/widget_icon_size">
+				<ImageView android:layout_width="@dimen/widget_icon_size"
+					android:id="@+id/widget_icon_tummytime_back" android:layout_height="@dimen/widget_icon_size"
+					android:scaleType="fitXY" android:layout_centerInParent="true"
+					android:src="@drawable/yellowfull">
+				</ImageView>
+				<ImageView android:id="@+id/widget_icon_tummytime"
+					android:src="@drawable/tummytime_icon" android:layout_width="@dimen/widget_icon_size"
+					android:scaleType="fitXY" android:layout_height="@dimen/widget_icon_size">
+				</ImageView>
+			</RelativeLayout>
+
+		</LinearLayout>
+	</RelativeLayout>
+
+	<RelativeLayout android:id="@+id/widget_left_hotspots"
+		android:layout_width="wrap_content" android:layout_height="wrap_content"
+		android:layout_alignParentLeft="true" android:layout_alignParentTop="true"
+		android:padding="10dip">
+
+		<LinearLayout android:id="@+id/widget_hotspots"
+			android:orientation="vertical" android:layout_width="wrap_content"
+			android:layout_height="wrap_content">
+			<RelativeLayout android:layout_width="@dimen/widget_hotspot_size"
+				android:id="@+id/widget_appt_inbox" android:layout_margin="2dip"
+				android:layout_height="@dimen/widget_hotspot_size">
+				<ImageView android:id="@+id/widget_hotspot_wall_icon"
+					android:scaleType="fitXY" android:src="@drawable/wall_icon"
+					android:layout_width="@dimen/widget_hotspot_size"
+					android:layout_height="@dimen/widget_hotspot_size">
+				</ImageView>
+				<ImageView android:id="@+id/widget_inbox_exclaim"
+					android:layout_height="12dip" android:layout_width="5dip"
+					android:layout_centerHorizontal="true" android:layout_marginTop="4dip"
+					android:layout_alignParentTop="true" android:background="@drawable/exclaimation_point">
+				</ImageView>
+				<RelativeLayout android:id="@+id/widget_inbox_count_holder"
+					android:layout_alignParentRight="true"
+					android:layout_alignParentTop="true" android:layout_width="16dip"
+					android:layout_height="16dip">
+					<ImageView android:id="@+id/widget_inbox_bubble"
+						android:layout_height="fill_parent" android:layout_width="fill_parent"
+						android:layout_centerInParent="true" android:background="@drawable/white_circle">
+					</ImageView>
+					<TextView android:id="@+id/widget_inbox_count"
+						android:padding="0dip" android:layout_margin="0dip"
+						android:gravity="center_vertical|center_horizontal"
+						android:layout_width="fill_parent" android:layout_height="fill_parent"
+						android:textColor="#000000" android:layout_centerInParent="true"
+						android:textSize="10sp" android:text="24"></TextView>
+				</RelativeLayout>
+			</RelativeLayout>
+			<RelativeLayout android:layout_width="@dimen/widget_hotspot_size"
+				android:id="@+id/widget_hotspot_diaper" android:layout_margin="2dip"
+				android:layout_height="@dimen/widget_hotspot_size">
+				<ImageView android:id="@+id/widget_hotspot_diaper_icon"
+					android:scaleType="fitXY" android:src="@drawable/diapers_icon"
+					android:layout_width="@dimen/widget_hotspot_size"
+					android:layout_height="@dimen/widget_hotspot_size"
+					android:layout_centerInParent="true">
+				</ImageView>
+			</RelativeLayout>
+			<RelativeLayout android:layout_width="@dimen/widget_hotspot_size"
+				android:id="@+id/widget_hotspot_babymood" android:layout_margin="2dip"
+				android:layout_height="@dimen/widget_hotspot_size">
+				<ImageView android:id="@+id/widget_hotspot_babymood_icon"
+					android:scaleType="fitXY" android:src="@drawable/babymoods_icon"
+					android:layout_width="@dimen/widget_hotspot_size"
+					android:layout_height="@dimen/widget_hotspot_size">
+				</ImageView>
+			</RelativeLayout>
+			<RelativeLayout android:layout_width="@dimen/widget_hotspot_size"
+				android:id="@+id/widget_hotspot_mymood" android:layout_margin="2dip"
+				android:layout_height="@dimen/widget_hotspot_size"
+				android:scaleType="fitXY">
+				<ImageView android:id="@+id/widget_hotspot_mymood_icon"
+					android:scaleType="fitXY" android:src="@drawable/moodmap_icon"
+					android:layout_width="@dimen/widget_hotspot_size"
+					android:layout_height="@dimen/widget_hotspot_size">
+				</ImageView>
+			</RelativeLayout>
+		</LinearLayout>
+	</RelativeLayout>
+
+	<TextView android:id="@+id/widget_name_tag" android:textColor="#000000"
+		android:text="@string/app_name" android:textSize="13sp"
+		android:textStyle="bold" android:layout_alignParentTop="true"
+		android:orientation="horizontal" android:paddingTop="5dip"
+		android:layout_width="wrap_content" android:layout_height="wrap_content"
+		android:layout_centerHorizontal="true">
+
+	</TextView>
+
+	<LinearLayout android:id="@+id/widget_inbox_bar"
+		android:layout_below="@+id/widget_name_tag" android:orientation="horizontal"
+		android:paddingTop="2dip" android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:layout_centerHorizontal="true">
+		<LinearLayout android:id="@+id/widget_appt_area"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"
+			android:orientation="horizontal">
+			<TextView android:id="@+id/widget_next_appt"
+				android:padding="0dip" android:layout_margin="0dip"
+				android:layout_width="wrap_content" android:layout_height="fill_parent"
+				android:textColor="#000000" android:textSize="13sp" android:gravity="center_vertical"
+				android:text="@string/next_appt" android:layout_marginRight="10dip"></TextView>
+			<TextView android:layout_width="wrap_content"
+				android:layout_height="fill_parent" android:textColor="#000000"
+				android:gravity="center_vertical" android:text=": "
+				android:textSize="12sp">
+			</TextView>
+			<TextView android:id="@+id/widget_next_appt_time"
+				android:layout_width="wrap_content" android:layout_height="fill_parent"
+				android:gravity="center_vertical" android:textColor="#000000"
+				android:text="2 days" android:textSize="13sp">
+			</TextView>
+		</LinearLayout>
+	</LinearLayout>
+
+	<TextView android:layout_marginTop="6dip" android:id="@+id/widget_divider"
+		android:layout_toRightOf="@+id/widget_left_hotspots"
+		android:layout_toLeftOf="@+id/widget_bottom_area"
+		android:layout_width="fill_parent" android:layout_height="2dip"
+		android:layout_below="@+id/widget_inbox_bar" android:background="#000000" />
+
+	<TextView android:id="@+id/widget_last_post"
+		android:layout_marginTop="6dip" android:paddingLeft="10dip"
+		android:paddingRight="10dip" android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:textColor="#000000"
+		android:layout_toRightOf="@+id/widget_left_hotspots"
+		android:layout_toLeftOf="@+id/widget_bottom_area"
+		android:layout_below="@+id/widget_divider" android:textSize="13sp"
+		android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras id consequat enim. Nam risus massa, consectetur sit amet sodales et, pharetra sed sem turpis duis.">
+
+	</TextView>
+	<TextView android:id="@+id/widget_count_replies"
+		android:layout_width="wrap_content" android:layout_height="wrap_content"
+		android:textColor="#000000" android:textSize="10sp"
+		android:layout_toLeftOf="@+id/widget_bottom_area"
+		android:layout_below="@+id/widget_last_post" android:text="@string/replies"
+		android:padding="0dip" android:layout_marginRight="10dip"></TextView>
+	<TextView android:id="@+id/widget_reply_count_space"
+		android:layout_width="wrap_content" android:layout_height="wrap_content"
+		android:textColor="#000000" android:layout_toLeftOf="@+id/widget_count_replies"
+		android:layout_below="@+id/widget_last_post" android:text=" "
+		android:textSize="10sp">
+	</TextView>
+	<TextView android:id="@+id/widget_reply_count"
+		android:layout_width="wrap_content" android:layout_height="wrap_content"
+		android:textColor="#000000" android:layout_toLeftOf="@+id/widget_reply_count_space"
+		android:layout_below="@+id/widget_last_post" android:text="XX"
+		android:textSize="10sp">
+	</TextView>
+
+
+</RelativeLayout>

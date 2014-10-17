@@ -1,0 +1,39 @@
+Copyright (c) 2012 Karen P. Tang, Sen Hirano
+
+This program is free software: you can redistribute it and/or modify it 
+under the terms of the GNU Lesser General Public License v. 3 as published 
+by the Free Software Foundation.
+
+This program is distributed in the hope that it will be useful, but 
+WITHOUT ANY WARRANTY, INCLUDING THE WARRANTIES OF MERCHANTABILITY OR FITNESS 
+FOR A PARTICULAR PURPOSE.  See the GNU General Public License v. 3 for more 
+details.
+
+These materials are made available by the University of California, Irvine, 
+or the corresponding Project HealthDesign grantee team (i.e., the Estrellita Project). 
+Neither the Robert Wood Johnson Foundation (RWJF), the University, nor any affiliate 
+thereof, nor any of their respective directors, trustees, officers, employees or 
+agents, makes any warranty, express or implied, or assumes any legal liability or 
+responsibility for the accuracy, completeness, or usefulness of any information, 
+apparatus, product, process, or service disclosed.  Reference in these materials to 
+any specific information, apparatus, product, process or service does not necessarily 
+constitute or imply its endorsement, recommendation, or favoring by RWJF, the 
+University, nor any affiliate thereof, nor any of their respective directors, 
+trustees, officers, employees or agents(“RWJF Parties”). RWJF Parties expressly 
+disclaim all liability with respect to the Materials, including without limitation 
+(i) any liability for any use of the Materials, and (ii) any liability for damages 
+(of any type, for any reason, however caused, or under any theory of liability) 
+arising out of or relating to the Materials or any use thereof, even if advised 
+of the possibility of that damage.  RWJF Parties expressly disclaim any and all 
+warranties, express or implied, including but not limited to implied warranties 
+of merchantability, fitness for a particular purpose, freedom from contamination 
+by computer viruses, non-infringement of proprietary rights, that the Materials 
+are free of defects or errors, and any warranties as to the accuracy, adequacy, 
+completeness, reliability, or usefulness of the Materials or any part thereof.
+
+You should have received a copy of the GNU Lesser General Public License v. 3 and 
+the GNU General Public License v. 3 with this program.  If not, see 
+	http://www.gnu.org/licenses/.
+
+Contact Information:
+Karen P. Tang & Sen Hirano c/o Estrellita Project team

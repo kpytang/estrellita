@@ -1,0 +1,30 @@
+<!--
+
+Copyright 2012, Karen P. Tang, Sen Hirano
+
+This file is part of the Estrellita project
+
+This program is free software: you can redistribute it and/or
+modify it under the terms of the GNU Lesser General Public License 
+as published by the Free Software Foundation, either version 3 of 
+the License, or any later version.
+
+This program is distributed in the hope that it will be useful, 
+but WITHOUT ANY WARRANTY; without even the implied warranty of 
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the 
+GNU General Public License for more details. 
+
+You should have received a copy of the GNU Lesser General Public 
+License along with this program. If not, see
+		http://www.gnu.org/licenses/
+
+-->
+<appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android"
+    android:minWidth="284dp"
+    android:minHeight="142dp"
+    android:updatePeriodMillis="21600000"
+    android:configure="edu.uci.ics.star.estrellita.widget.MainWidgetConfigurationWide" 
+    android:initialLayout="@layout/appwidget_provider_layout_wide">
+</appwidget-provider>
+<!-- 86400000 = 24 hours -->
+<!-- 21600000 = 6 hours -->

@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+
+Copyright 2012, Karen P. Tang, Sen Hirano
+
+This file is part of the Estrellita project
+
+This program is free software: you can redistribute it and/or
+modify it under the terms of the GNU Lesser General Public License 
+as published by the Free Software Foundation, either version 3 of 
+the License, or any later version.
+
+This program is distributed in the hope that it will be useful, 
+but WITHOUT ANY WARRANTY; without even the implied warranty of 
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the 
+GNU General Public License for more details. 
+
+You should have received a copy of the GNU Lesser General Public 
+License along with this program. If not, see
+		http://www.gnu.org/licenses/
+
+-->
+<resources>
+	<!-- general layout --> 
+	<dimen name="spacer_xsmall">2dip</dimen>
+	<dimen name="spacer_small">5dip</dimen>
+	<dimen name="spacer_large">10dip</dimen>
+	<dimen name="spacer_small_negative">-5dip</dimen>
+	<dimen name="spacer_large_negative">-10dip</dimen>
+ 
+	<!-- margins -->
+	<dimen name="marginLeft_main">10dip</dimen>
+	<dimen name="marginRight_main">10dip</dimen>
+	<dimen name="marginLeft_tile">10dip</dimen>
+	<dimen name="marginRight_tile">12dip</dimen>
+	
+	<!--  font sizes -->
+	<dimen name="font_xsmall">10sp</dimen>
+	<dimen name="font_small">15sp</dimen>
+	<dimen name="font_regular">20sp</dimen>
+	<dimen name="font_large">30sp</dimen>
+	<dimen name="font_xlarge">40sp</dimen>
+	
+	<!-- image sizes -->
+	<dimen name="icon_small">24dip</dimen>
+	<dimen name="icon_medium">48dip</dimen>
+	<dimen name="icon_large">72dip</dimen>
+	<style name="generic_icon">
+		<item name="android:background">@android:color/transparent</item>
+		<item name="android:adjustViewBounds">true</item>
+		<item name="android:scaleType">fitEnd</item>
+	</style>
+	
+	<!-- buttons/selectors -->
+	<dimen name="buttonPadding">10dip</dimen>
+	<dimen name="buttonRadius">15dip</dimen>
+	<dimen name="buttonStrokeWidth">3dip</dimen>
+	<dimen name="buttonThinStrokeWidth">2dip</dimen>
+	<dimen name="buttonFontSize">25dip</dimen>
+	
+	<!-- radio buttons -->
+	<dimen name="radioButtonTwoRows">65dip</dimen>
+	<style name="radiobutton_row0">
+		<item name="android:textColor">@color/white</item>
+		<item name="android:textStyle">bold</item>
+		<item name="android:textSize">@dimen/font_regular</item>
+	</style>
+	<style name="radiobutton_row1">
+		<item name="android:textColor">@color/white</item>
+		<item name="android:textSize">@dimen/font_small</item>
+	</style>	
+	
+	<!-- separators/dividers -->
+	<style name="greySeparator_thin">
+		<item name="android:layout_width">fill_parent</item>
+		<item name="android:layout_height">2dip</item>
+		<item name="android:layout_centerVertical">true</item>
+		<item name="android:layout_alignParentTop">true</item>
+		<item name="android:background">@color/darkgrey</item>
+	</style>
+	<style name="emptyBlackBuffer_large">
+		<item name="android:layout_width">fill_parent</item>
+		<item name="android:layout_height">@dimen/spacer_large</item>
+		<item name="android:layout_centerVertical">true</item>
+		<item name="android:layout_alignParentTop">true</item>
+		<item name="android:background">@color/black</item>
+	</style>
+	
+	<!-- general activity layout -->
+	<dimen name="activityIconSize">@dimen/icon_medium</dimen>
+	<dimen name="activityHeaderHeight">70dip</dimen>
+	<dimen name="buttonIconSize">@dimen/icon_medium</dimen>
+	<dimen name="buttonHeaderHeight">40dip</dimen>
+	<dimen name="buttonSpacer">65dip</dimen>
+	<dimen name="buttonFooterHeight">60dip</dimen>
+	<dimen name="buttonFooterWidth">250dip</dimen>
+	<dimen name="listIconSize">@dimen/icon_small</dimen>
+	<dimen name="activityNameGridLine">25dip</dimen>
+	<style name="activityIcon" parent="profilePic">
+		<item name="android:maxHeight">@dimen/activityIconSize</item>
+		<item name="android:adjustViewBounds">true</item>
+		<item name="android:scaleType">fitEnd</item>
+		<item name="android:background">@android:color/transparent</item>
+	</style>
+	<style name="activityTitle">
+		<item name="android:textColor">@color/white</item>
+		<item name="android:textSize">@dimen/font_large</item>
+		<item name="android:paddingLeft">@dimen/spacer_large</item>
+	</style>
+	<style name="activitySubtitle">
+		<item name="android:textColor">@color/white</item>
+		<item name="android:textSize">@dimen/font_small</item>
+		<item name="android:paddingLeft">@dimen/spacer_large</item>
+	</style>
+	<style name="buttonIcon" parent="profilePic">
+		<item name="android:maxHeight">@dimen/buttonIconSize</item>
+		<item name="android:adjustViewBounds">true</item>
+		<item name="android:scaleType">fitCenter</item>
+		<item name="android:background">@android:color/transparent</item>
+		<item name="android:src">@drawable/button_icon</item>
+	</style>
+	<style name="buttonText">
+		<item name="android:textColor">@color/white</item>
+		<item name="android:textSize">@dimen/font_regular</item>
+		<item name="android:paddingLeft">@dimen/spacer_large</item>
+	</style>
+	<style name="footerButton">
+		<item name="android:textColor">@color/white</item>
+		<item name="android:textSize">@dimen/font_regular</item>
+		<item name="android:background">@drawable/btn_no_border</item>
+	</style>
+   	<style name="listIcon">
+    	<item name="android:maxWidth">@dimen/listIconSize</item>
+		<item name="android:maxHeight">@dimen/listIconSize</item>
+		<item name="android:background">@android:color/transparent</item>
+		<item name="android:adjustViewBounds">true</item>
+		<item name="android:scaleType">fitEnd</item>
+	</style>
+	<style name="todaysDate">
+		<item name="android:textColor">@color/white</item>
+		<item name="android:textStyle">bold</item>
+		<item name="android:textSize">@dimen/font_regular</item>
+		<item name="android:paddingBottom">@dimen/spacer_large</item>
+		<item name="android:paddingTop">@dimen/spacer_small</item>
+	</style>
+
+	<!-- login screen -->
+	<dimen name="loginButtonSize">125dip</dimen>
+	<style name="loginPrompt">
+    	<item name="android:textColor">@color/white</item>
+		<item name="android:textSize">@dimen/font_large</item>
+		<item name="android:paddingTop">20dip</item>
+    	<item name="android:paddingBottom">20dip</item>
+    </style>
+	<style name="loginButton">
+    	<item name="android:textSize">@dimen/font_regular</item>
+    	<item name="android:layout_marginTop">15dip</item>
+    	<item name="android:gravity">center</item>
+    </style>
+
+    <!-- home screen -->
+    <dimen name="profilePicSize">65dip</dimen>
+    <dimen name="tileIconSize">60dip</dimen>
+    <dimen name="tileHeaderText">22sp</dimen>
+	<dimen name="tileInfoText">18sp</dimen>
+    <style name="profileLayout">
+    	<item name="android:paddingTop">@dimen/spacer_large</item>
+    	<item name="android:paddingBottom">@dimen/spacer_small</item>
+    </style>
+    <style name="profilePic">
+    	<item name="android:layout_marginLeft">@dimen/marginLeft_main</item>
+    	<item name="android:maxHeight">@dimen/profilePicSize</item>
+    	<item name="android:adjustViewBounds">true</item>
+    	<item name="android:scaleType">centerInside</item>
+    	<item name="android:background">@color/white</item>
+    	<item name="android:src">@drawable/baby_boy</item>
+    </style>
+    <style name="profileInfoLayout">
+    	<item name="android:layout_marginLeft">@dimen/spacer_small</item>
+    	<item name="android:layout_marginRight">@dimen/marginRight_main</item>
+    </style>
+    <style name="profileName">
+    	<item name="android:layout_marginBottom">@dimen/spacer_small_negative</item>
+    	<item name="android:textColor">@color/white</item>
+    	<item name="android:textSize">@dimen/font_large</item>
+    </style>
+    <style name="profileChronologicalAgeLayout">
+    	<item name="android:layout_marginBottom">@dimen/spacer_small_negative</item>
+    </style>
+    <style name="profileChronologicalAge">
+    	<item name="android:textColor">@color/white</item>
+    	<item name="android:textSize">@dimen/font_small</item>
+    </style>
+    <style name="profileChronologicalAgeHeader">
+    	<item name="android:paddingLeft">@dimen/spacer_small</item>
+    	<item name="android:textColor">@color/white</item>
+    	<item name="android:textSize">@dimen/font_xsmall</item>
+    	<item name="android:text">@string/chronological_age</item>
+    </style>
+    <style name="profileAdjustedAge">
+    	<item name="android:textSize">@dimen/font_small</item>
+    </style>
+    <style name="profileAdjustedAgeHeader">
+    	<item name="android:paddingLeft">@dimen/spacer_small</item>
+    	<item name="android:textSize">@dimen/font_xsmall</item>
+    	<item name="android:text">@string/adjusted_age</item>    	
+    </style>
+    <style name="notificationsLayout">
+    	<item name="android:paddingTop">@dimen/spacer_small</item>
+    	<item name="android:paddingBottom">@dimen/spacer_small</item>
+    	<item name="android:background">@drawable/btn_no_border</item>
+    </style>
+    <style name="notificationsHeader">
+    	<item name="android:layout_marginLeft">@dimen/spacer_xsmall</item>
+    	<item name="android:textColor">@color/darkgrey</item>
+    	<item name="android:textSize">@dimen/font_xsmall</item>
+    </style>
+    <style name="lastUpdated">
+    	<item name="android:textColor">@color/darkgrey</item>
+    	<item name="android:textSize">@dimen/font_small</item>
+    </style>
+    <style name="notificationsCount">
+    	<item name="android:textColor">@color/darkgrey</item>
+    	<item name="android:textSize">@dimen/font_small</item>
+    	<item name="android:paddingLeft">@dimen/spacer_xsmall</item>
+    </style>
+    <style name="tipsIcon">
+    	<item name="android:layout_marginTop">0dip</item>
+    	<item name="android:layout_marginRight">@dimen/marginRight_main</item>
+    	<item name="android:maxHeight">20dip</item>
+    	<item name="android:maxWidth">20dip</item>
+    	<item name="android:adjustViewBounds">true</item>
+    	<item name="android:scaleType">fitEnd</item>
+    	<item name="android:paddingLeft">@dimen/spacer_xsmall</item>
+    	<item name="android:src">@drawable/tip</item>
+    </style>
+	
+	<!-- home screen: tiles -->
+	<style name="tilesLayout">
+		<item name="android:paddingLeft">@dimen/spacer_large</item>
+		<item name="android:paddingRight">@dimen/spacer_xsmall</item>
+		<item name="android:paddingTop">@dimen/spacer_large</item>
+		<item name="android:paddingBottom">@dimen/spacer_large</item>
+		<item name="android:background">@color/black</item>
+	</style>
+	<style name="gridLayout">
+		<item name="android:listSelector">@android:color/transparent</item>
+		<item name="android:scrollbars">none</item>
+		<item name="android:verticalSpacing">@dimen/spacer_large</item>
+		<item name="android:stretchMode">columnWidth</item>
+		<item name="android:numColumns">2</item>
+	</style>
+	<style name="tileHeader">
+		<item name="android:paddingRight">@dimen/marginRight_tile</item>
+		<item name="android:paddingTop">@dimen/spacer_small</item>
+    	<item name="android:textColor">@color/darkgrey</item>
+    	<item name="android:textSize">@dimen/tileHeaderText</item>
+    </style>
+    <style name="tileInfo">
+		<item name="android:paddingRight">@dimen/marginRight_tile</item>
+    	<item name="android:textColor">@color/white</item>
+    	<item name="android:textSize">@dimen/tileInfoText</item>
+    </style>
+    <style name="tileButton">
+	    <item name="android:textColor">@color/white</item>
+	    <item name="android:textSize">@dimen/buttonFontSize</item>
+	    <item name="android:gravity">bottom|left</item>
+	    <item name="android:paddingLeft">@dimen/spacer_large</item>
+	    <item name="android:shadowColor">@color/black</item>
+	    <item name="android:shadowDx">1</item>
+	    <item name="android:shadowDy">1</item>
+	    <item name="android:shadowRadius">2</item>
+    </style>
+    <style name="tileIcon">
+    	<item name="android:maxWidth">@dimen/tileIconSize</item>
+    	<item name="android:maxHeight">@dimen/tileIconSize</item>
+    	<item name="android:adjustViewBounds">true</item>
+    	<item name="android:scaleType">fitStart</item>
+    	<item name="android:paddingTop">@dimen/spacer_small</item>
+    </style>
+    
+    <!-- appointments -->
+    <dimen name="postitIconSize">@dimen/icon_small</dimen>
+    <dimen name="tipIconSize">@dimen/icon_small</dimen>
+    <dimen name="concernsIconSize">@dimen/icon_medium</dimen>
+    <dimen name="formLeftFieldWidth">130dip</dimen>    
+    <style name="dateRow">
+    	<item name="android:textColor">@color/white</item>
+    	<item name="android:textSize">@dimen/font_regular</item>
+    	<item name="android:paddingTop">@dimen/spacer_small</item>
+    	<item name="android:paddingBottom">@dimen/spacer_small</item>
+    </style>
+    <style name="apptDoctor">
+    	<item name="android:textColor">@color/white</item>
+    	<item name="android:textSize">@dimen/font_regular</item>
+    </style>
+    <style name="apptTime">
+    	<item name="android:textColor">@color/white</item>
+    	<item name="android:textSize">@dimen/font_regular</item>
+    </style>
+    <style name="apptLocation">
+    	<item name="android:textColor">@color/white</item>
+    	<item name="android:textSize">@dimen/font_small</item>
+    </style>
+	<style name="apptFieldName">
+		<item name="android:textColor">@color/white</item>
+    	<item name="android:textSize">@dimen/font_small</item>
+    	<item name="android:textStyle">bold</item>
+    	<item name="android:paddingLeft">@dimen/marginLeft_main</item>
+    	<item name="android:paddingRight">@dimen/spacer_large</item>
+    	<item name="android:paddingTop">@dimen/spacer_xsmall</item>
+    	<item name="android:paddingBottom">@dimen/spacer_xsmall</item>
+    	<item name="android:gravity">left|center_vertical</item>
+	</style>
+	<style name="apptBigTextField" parent="@android:style/Widget.EditText">
+		<item name="android:textColorHint">#AABBAA</item>
+		<item name="android:textColor">@color/black</item>
+    	<item name="android:textSize">@dimen/font_small</item>
+	</style>
+	<style name="apptConcernsPrompt">
+		<item name="android:textColor">@color/white</item>
+    	<item name="android:textSize">@dimen/font_small</item>
+    	<item name="android:layout_marginTop">@dimen/spacer_small_negative</item>
+    	<item name="android:paddingLeft">@dimen/marginLeft_main</item>
+    	<item name="android:paddingRight">@dimen/spacer_large</item>
+    	<item name="android:paddingBottom">@dimen/spacer_xsmall</item>
+    	<item name="android:gravity">center</item>
+	</style>
+	<style name="tipIcon">
+    	<item name="android:maxWidth">@dimen/tipIconSize</item>
+		<item name="android:maxHeight">@dimen/tipIconSize</item>
+		<item name="android:adjustViewBounds">true</item>
+		<item name="android:scaleType">fitEnd</item>
+		<item name="android:gravity">right|center_vertical</item>
+	</style>
+	<style name="concernsIcon">
+    	<item name="android:maxWidth">@dimen/concernsIconSize</item>
+		<item name="android:maxHeight">@dimen/concernsIconSize</item>
+		<item name="android:adjustViewBounds">true</item>
+		<item name="android:scaleType">fitCenter</item>
+		<item name="android:gravity">center_vertical</item>
+		<item name="android:layout_marginLeft">@dimen/spacer_large</item>
+	</style>
+	
+	<!--  diapers -->
+	<style name="diaperCountHeader">
+		<item name="android:textColor">@color/white</item>
+    	<item name="android:textSize">@dimen/font_small</item>
+    	<item name="android:textStyle">bold</item>
+    	<item name="android:paddingLeft">@dimen/marginLeft_main</item>
+    	<item name="android:gravity">left|center_vertical</item>
+	</style>
+	<style name="saveButton">
+		<item name="android:scaleType">centerInside</item>
+    	<item name="android:layout_marginLeft">@dimen/marginLeft_main</item>
+    	<item name="android:adjustViewBounds">true</item>
+    	<item name="android:maxWidth">@dimen/icon_small</item>
+		<item name="android:maxHeight">@dimen/icon_small</item>
+	</style>
+	<style name="photoButton">
+		<item name="android:scaleType">fitCenter</item>
+    	<item name="android:adjustViewBounds">true</item>
+    	<item name="android:background">@drawable/btn_with_thin_border</item>
+	</style>
+	<style name="removeButton">
+		<item name="android:paddingLeft">@dimen/spacer_large</item>
+		<item name="android:layout_marginRight">@dimen/marginRight_main</item>
+		<item name="android:scaleType">fitEnd</item>
+    	<item name="android:adjustViewBounds">true</item>
+    	<item name="android:maxWidth">@dimen/icon_medium</item>
+		<item name="android:maxHeight">@dimen/icon_medium</item>
+	</style>
+	<style name="retakeButton">
+		<item name="android:paddingLeft">@dimen/spacer_large</item>
+		<item name="android:layout_marginRight">@dimen/marginRight_main</item>
+		<item name="android:scaleType">fitEnd</item>
+    	<item name="android:adjustViewBounds">true</item>
+    	<item name="android:maxWidth">@dimen/icon_medium</item>
+		<item name="android:maxHeight">@dimen/icon_medium</item>
+	</style>
+	
+	<!--  surveys (includes bonding) -->
+	<style name="surveyPrompt">
+		<item name="android:textColor">@color/white</item>
+    	<item name="android:textSize">@dimen/font_regular</item>
+    	<item name="android:paddingLeft">@dimen/marginLeft_main</item>
+    	<item name="android:gravity">left|center_vertical</item>
+	</style>
+	<style name="surveyCheckBox" parent="@android:style/Widget.CompoundButton.CheckBox">
+		<item name="android:layout_marginLeft">25dip</item>
+		<item name="android:textSize">@dimen/font_regular</item>
+	</style>
+	
+	<!-- my notes -->
+	<style name="takePhotoButton">
+		<item name="android:layout_marginLeft">@dimen/marginLeft_main</item>
+		<item name="android:background">@drawable/btn_with_thin_border</item>
+	</style>
+	<style name="morePhotosButton">
+		<item name="android:layout_marginRight">@dimen/marginRight_main</item>
+		<item name="android:background">@drawable/btn_with_thin_border</item>
+	</style>
+	
+	<!-- weight -->
+	<style name="retakeButton2">
+		<item name="android:scaleType">centerInside</item>
+    	<item name="android:layout_marginLeft">@dimen/marginLeft_main</item>
+    	<item name="android:adjustViewBounds">true</item>
+    	<item name="android:maxWidth">@dimen/icon_medium</item>
+		<item name="android:maxHeight">@dimen/icon_medium</item>
+	</style>
+	
+	<!-- Appwidget -->
+	
+	<dimen name="widget_icon_size">35dip</dimen>
+	<dimen name="widget_hotspot_size">45dip</dimen>
+	
+</resources>

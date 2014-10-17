@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+
+Copyright 2012, Karen P. Tang, Sen Hirano
+
+This file is part of the Estrellita project
+
+This program is free software: you can redistribute it and/or
+modify it under the terms of the GNU Lesser General Public License 
+as published by the Free Software Foundation, either version 3 of 
+the License, or any later version.
+
+This program is distributed in the hope that it will be useful, 
+but WITHOUT ANY WARRANTY; without even the implied warranty of 
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the 
+GNU General Public License for more details. 
+
+You should have received a copy of the GNU Lesser General Public 
+License along with this program. If not, see
+		http://www.gnu.org/licenses/
+
+-->
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+	<item android:id="@+id/debug_sync"  android:icon="@drawable/ic_refresh"
+		android:title="Sync w/ Server" />
+	<item android:id="@+id/debug_update_widget" 
+		android:title="Update widget" />
+	<item android:id="@+id/debug_dump_db" 
+		android:title="Dump DB" />
+	<item android:id="@+id/debug_regular_check" 
+		android:title="Check Regular" />
+	<item android:id="@+id/debug_special_check" 
+		android:title="Check Special" />
+	<item android:id="@+id/change_preferences" 
+		android:title="Change Prefs" />
+</menu>

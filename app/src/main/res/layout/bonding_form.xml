@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+
+Copyright 2012, Karen P. Tang, Sen Hirano
+
+This file is part of the Estrellita project
+
+This program is free software: you can redistribute it and/or
+modify it under the terms of the GNU Lesser General Public License 
+as published by the Free Software Foundation, either version 3 of 
+the License, or any later version.
+
+This program is distributed in the hope that it will be useful, 
+but WITHOUT ANY WARRANTY; without even the implied warranty of 
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the 
+GNU General Public License for more details. 
+
+You should have received a copy of the GNU Lesser General Public 
+License along with this program. If not, see
+		http://www.gnu.org/licenses/
+
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:orientation="vertical"
+	>
+    <include 
+       	layout="@layout/activity_header"
+       	android:layout_width="fill_parent"
+       	android:layout_height="@dimen/activityHeaderHeight"
+       	/> 
+   	<View
+		style="@style/greySeparator_thin"
+		/>
+   	<TextView
+   		style="@style/todaysDate"
+   		android:id="@+id/date_header"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:gravity="center"
+		/>
+	<TextView
+		style="@style/surveyPrompt"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:text="@string/update_bonding_question"
+		/>
+	<CheckBox
+		style="@style/surveyCheckBox" 
+		android:id="@+id/reading_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reading" 
+        />
+    <CheckBox 
+    	style="@style/surveyCheckBox"
+    	android:id="@+id/singing_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Singing" 
+        />
+    <CheckBox 
+    	style="@style/surveyCheckBox"
+    	android:id="@+id/talking_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Talking" 
+        />
+    <CheckBox
+    	style="@style/surveyCheckBox"
+    	android:id="@+id/walking_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Taking Baby for a Walk" 
+        />
+    <CheckBox 
+    	style="@style/surveyCheckBox"
+    	android:id="@+id/tummytime_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tummy Time" 
+        />
+	<include 
+       	layout="@layout/button_footer"
+       	android:layout_width="fill_parent"
+       	android:layout_height="@dimen/buttonFooterHeight"
+       	/> 
+</LinearLayout>

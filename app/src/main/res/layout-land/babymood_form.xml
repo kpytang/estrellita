@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+
+Copyright 2012, Karen P. Tang, Sen Hirano
+
+This file is part of the Estrellita project
+
+This program is free software: you can redistribute it and/or
+modify it under the terms of the GNU Lesser General Public License 
+as published by the Free Software Foundation, either version 3 of 
+the License, or any later version.
+
+This program is distributed in the hope that it will be useful, 
+but WITHOUT ANY WARRANTY; without even the implied warranty of 
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the 
+GNU General Public License for more details. 
+
+You should have received a copy of the GNU Lesser General Public 
+License along with this program. If not, see
+		http://www.gnu.org/licenses/
+
+-->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:orientation="vertical"
+	>
+<LinearLayout 
+	android:orientation="vertical"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:padding="5dp"
+	>
+    <include 
+		layout="@layout/activity_header"
+		android:layout_width="fill_parent"
+		android:layout_height="@dimen/activityHeaderHeight"
+		/>
+	<View 
+		style="@style/greySeparator_thin"
+		/>
+	<LinearLayout 
+		android:id="@+id/date_header"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:orientation="vertical"
+		android:gravity="center"
+		android:layout_gravity="center"
+		android:layout_marginTop="@dimen/spacer_small"
+		android:background="@drawable/btn_with_thin_border"
+		>
+		<TextView
+	   		android:id="@+id/date_header_text"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:gravity="center"
+			android:textSize="@dimen/font_regular"
+			android:textStyle="bold"
+			android:textColor="@color/white"
+			/>
+	</LinearLayout>
+	<RelativeLayout 
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		>
+		<LinearLayout
+			android:id="@+id/gauge"
+			android:orientation="vertical"
+			android:layout_width="325dip"
+			android:layout_height="150dip"
+			android:layout_alignParentTop="true"
+			android:layout_alignParentLeft="true"
+			android:paddingLeft="@dimen/spacer_small"
+			>
+		</LinearLayout>
+		<RelativeLayout
+			android:layout_width="325dip"
+			android:layout_height="wrap_content"
+			android:layout_alignParentBottom="true"
+			android:layout_alignParentLeft="true"
+			android:layout_below="@id/gauge"
+			>
+		   	<TextView
+		   		android:id="@+id/min_label"
+		   		android:layout_width="@dimen/formLeftFieldWidth"
+				android:layout_height="wrap_content"
+				android:layout_alignParentTop="true"
+				android:layout_alignParentLeft="true"
+				android:gravity="left"
+				android:text="@string/babymood_0_label" 
+				/>			
+		   	<TextView
+		   		android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignParentTop="true"
+				android:layout_alignParentRight="true"
+				android:layout_toRightOf="@id/min_label"
+				android:gravity="right"
+				android:text="@string/babymood_10_label" 
+				/>	
+		</RelativeLayout>
+		<LinearLayout
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_alignParentTop="true"
+			android:layout_alignParentRight="true"
+			android:layout_toRightOf="@id/gauge"
+			android:orientation="vertical"
+			>
+			<RelativeLayout 
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:paddingTop="@dimen/spacer_small"
+				>
+			   	<TextView
+			   		style="@style/apptFieldName"
+			   		android:id="@+id/notes_field"
+			   		android:layout_width="@dimen/formLeftFieldWidth"
+					android:layout_height="wrap_content"
+					android:layout_alignParentTop="true"
+					android:layout_alignParentLeft="true"
+					android:gravity="left"
+					android:text="@string/appointment_notes" 
+					/>			
+			   	<ImageView
+			    	style="@style/tipIcon" 
+			    	android:id="@+id/notes_help" 
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:layout_alignParentTop="true"
+					android:layout_alignParentRight="true"
+					android:layout_toRightOf="@id/notes_field"
+			        android:src="@drawable/notes_tip_icon"
+			        android:clickable="true"
+			        />
+			</RelativeLayout>
+		   	<EditText 
+		   		style="@style/apptBigTextField"
+		   		android:id="@+id/notes"
+		   		android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:maxLines="2"
+				android:hint="@string/babymood_notes_hint_short"
+				android:gravity="left|top"
+				/>
+			<include 
+		       	layout="@layout/button_footer"
+		       	android:layout_width="fill_parent"
+		       	android:layout_height="@dimen/buttonFooterHeight"
+		       	/> 
+       	</LinearLayout>
+   	</RelativeLayout>
+</LinearLayout>
+</ScrollView>

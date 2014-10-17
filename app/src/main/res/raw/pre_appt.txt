@@ -1,0 +1,37 @@
+T	Pre-Appointment
+P	Please answer a few questions about this upcoming appointment.
+---
+QI	0
+Q	Will you or another adult be able to take your baby to this appointment?
+QT	SINGLE_CHOICE
+A	Yes
+A	No
+CR	0
+CQI	4
+---
+QI	1
+Q	There are many reasons why parents can't make it to their baby's appointments. What are the reasons that you or another adult will not be able to take your baby to this appointment?         (Please select all that apply) 
+QT	MULTIPLE_CHOICE
+A	I am not feeling well
+A	My children are not feeling well
+A	I need to look after my other children
+A	I've rescheduled this appointment
+A	I do not have transportation to get to the appointment
+A	Other
+CR	5
+CQI	2
+CR	0,1,2,3,4
+CQI	3
+!	0,1,2,3,4,5
+---
+QI	2
+Q	Please explain for what other reasons your baby will not be able to attend this appointment?
+QT	FREEFORM_TEXT
+---
+QI	3
+Q	We recommend that you reschedule this appointment to better fit your schedule. 
+QT	EOS
+---
+QI	4
+Q	Great! You can always find your baby's upcoming appointments quickly and easily through Estrellita.
+QT	EOS

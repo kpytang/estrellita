@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+
+Copyright 2012, Karen P. Tang, Sen Hirano
+
+This file is part of the Estrellita project
+
+This program is free software: you can redistribute it and/or
+modify it under the terms of the GNU Lesser General Public License 
+as published by the Free Software Foundation, either version 3 of 
+the License, or any later version.
+
+This program is distributed in the hope that it will be useful, 
+but WITHOUT ANY WARRANTY; without even the implied warranty of 
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the 
+GNU General Public License for more details. 
+
+You should have received a copy of the GNU Lesser General Public 
+License along with this program. If not, see
+		http://www.gnu.org/licenses/
+
+-->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:scrollbars="none"
+    >
+	<LinearLayout
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+		android:orientation="vertical"
+		>
+	    <include 
+	       	layout="@layout/activity_header"
+	       	android:layout_width="fill_parent"
+	       	android:layout_height="@dimen/activityHeaderHeight"
+	       	/> 
+       	<View 
+			style="@style/greySeparator_thin"
+			/>
+       	<LinearLayout 
+		android:id="@+id/date_header"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:orientation="vertical"
+		android:gravity="center"
+		android:layout_gravity="center"
+		android:layout_marginTop="@dimen/spacer_small"
+		android:background="@drawable/btn_with_thin_border"
+		>
+			<TextView
+		   		android:id="@+id/date_header_text"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:gravity="center"
+				android:textSize="@dimen/font_regular"
+				android:textStyle="bold"
+				android:textColor="@color/white"
+				/>
+		</LinearLayout>
+		<LinearLayout 
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal"
+			>
+			<TextView
+				style="@style/diaperCountHeader"
+				android:id="@+id/diaper_count_header"
+				android:layout_width="@dimen/icon_large"
+				android:layout_height="fill_parent"
+				android:gravity="center|center_vertical"
+				android:text="today's\ntotal" 
+				/>
+			<LinearLayout
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:orientation="vertical"
+				android:layout_weight="1.0"
+				>
+				<TextView
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					android:gravity="center"
+					android:text="Wet"
+					/>
+				<edu.uci.ics.star.estrellita.customview.TextDiaperNumberPicker
+					android:id="@+id/wet_diaper_count"
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content" 
+					/>
+			</LinearLayout>
+			<LinearLayout
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:orientation="vertical"
+				android:layout_weight="1.0"
+				>
+				<TextView
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					android:gravity="center"
+					android:text="Poopy"
+					/>
+				<edu.uci.ics.star.estrellita.customview.TextDiaperNumberPicker
+					android:id="@+id/dirty_diaper_count"
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content" 
+					/>
+			</LinearLayout>
+		</LinearLayout>
+		<RelativeLayout
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:paddingTop="@dimen/spacer_small"
+			>
+			<ImageView
+				style="@style/retakeButton"
+		    	android:id="@+id/camera_icon"
+		   		android:layout_width="wrap_content"
+				android:layout_height="75dip"
+				android:layout_alignParentTop="true"
+				android:layout_alignParentRight="true"
+				android:gravity="center_vertical"
+				android:src="@drawable/retake_icon"
+		        />
+	        <FrameLayout
+	        	style="@style/photoButton"
+	        	android:id="@+id/photo_frame"
+	        	android:layout_width="125dip"
+				android:layout_height="125dip"
+				android:layout_alignParentTop="true"
+				android:layout_alignParentBottom="true"
+				android:layout_toLeftOf="@id/camera_icon"
+				android:clickable="true"
+				>
+		        <ImageView
+					android:id="@+id/current_photo"
+			   		android:layout_width="fill_parent"
+					android:layout_height="fill_parent"
+					/>
+				<TextView
+			   		android:id="@+id/previous_photos"
+			   		android:layout_width="fill_parent"
+					android:layout_height="fill_parent"
+					android:gravity="center"
+					android:text="see previous photos" 
+					android:textSize="@dimen/font_small"
+					/> 
+			</FrameLayout>
+			<ImageView
+				style="@style/saveButton"
+		    	android:id="@+id/save_icon"
+		   		android:layout_width="@dimen/icon_large"
+				android:layout_height="125dip"
+				android:layout_alignParentTop="true"
+				android:layout_alignParentBottom="true"
+				android:layout_toLeftOf="@id/photo_frame"
+				android:gravity="center_vertical"
+				android:src="@drawable/save_icon"
+		        />
+		</RelativeLayout>
+		<include 
+	       	layout="@layout/button_footer"
+	       	android:layout_width="fill_parent"
+	       	android:layout_height="@dimen/buttonFooterHeight"
+	       	/> 
+	</LinearLayout>
+</ScrollView>

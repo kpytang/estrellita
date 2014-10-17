@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+
+Copyright 2012, Karen P. Tang, Sen Hirano
+
+This file is part of the Estrellita project
+
+This program is free software: you can redistribute it and/or
+modify it under the terms of the GNU Lesser General Public License 
+as published by the Free Software Foundation, either version 3 of 
+the License, or any later version.
+
+This program is distributed in the hope that it will be useful, 
+but WITHOUT ANY WARRANTY; without even the implied warranty of 
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the 
+GNU General Public License for more details. 
+
+You should have received a copy of the GNU Lesser General Public 
+License along with this program. If not, see
+		http://www.gnu.org/licenses/
+
+-->
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+	<PreferenceCategory
+		android:title="Reminders">
+		<edu.uci.ics.star.estrellita.sharedprefs.HourPickerPreference
+			android:key="sync_service_alert_time"
+            android:title="Nightly alert time"
+            android:summary="Estrellita will remind you every day during this hour"
+            />
+        <PreferenceScreen 
+        	android:key="sync_service_quiet_time"
+            android:title="Quiet Hours"
+            android:summary="Stop all Estrellita reminders during these hours"
+        	>
+        	<edu.uci.ics.star.estrellita.sharedprefs.HourPickerPreference
+				android:key="sync_service_quiet_time_start"
+	            android:title="Starting Time for Quiet Hours"
+	            android:summary="Starting at this hour, Estrellita will turn OFF all reminders"
+	            />
+            <edu.uci.ics.star.estrellita.sharedprefs.HourPickerPreference
+				android:key="sync_service_quiet_time_end"
+	            android:title="Ending Time for Quiet Hours"
+	            android:summary="Ending at this hour, Estrellita will turn ON all reminders"
+	            />
+		</PreferenceScreen>  
+    </PreferenceCategory>
+    
+    <PreferenceCategory
+		android:title="Troubleshooting Tools">
+		<edu.uci.ics.star.estrellita.sharedprefs.SyncDataPreference
+			android:key="sync_data"
+            android:title="Sync data"
+            android:summary="Force Estrellita to sync its data with the online database"
+            />
+        <edu.uci.ics.star.estrellita.sharedprefs.UpdateWidgetPreference
+			android:key="update_widget"
+            android:title="Update widget"
+            android:summary="Force Estrellita to update the widget on the home screen"
+            />
+        <edu.uci.ics.star.estrellita.sharedprefs.SendDBPreference
+			android:key="email_db"
+            android:title="Share Estrellita database"
+            android:summary="Send an email with the phone's Estrellita database"
+            />
+        <!-- <edu.uci.ics.star.estrellita.sharedprefs.UpdateDBPreference
+			android:key="restore_db"
+            android:title="Restore Estrellita database"
+            android:summary="Restorethe phone's Estrellita database from the card"
+            /> -->
+        <edu.uci.ics.star.estrellita.sharedprefs.SendLogPreference
+			android:key="email_log"
+            android:title="Share phone log"
+            android:summary="Send an email with the phone's log"
+            />
+	</PreferenceCategory>
+	
+</PreferenceScreen>

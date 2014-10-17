@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+
+Copyright 2012, Karen P. Tang, Sen Hirano
+
+This file is part of the Estrellita project
+
+This program is free software: you can redistribute it and/or
+modify it under the terms of the GNU Lesser General Public License 
+as published by the Free Software Foundation, either version 3 of 
+the License, or any later version.
+
+This program is distributed in the hope that it will be useful, 
+but WITHOUT ANY WARRANTY; without even the implied warranty of 
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the 
+GNU General Public License for more details. 
+
+You should have received a copy of the GNU Lesser General Public 
+License along with this program. If not, see
+		http://www.gnu.org/licenses/
+
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" 
+	android:layout_height="fill_parent"
+	android:orientation="vertical">
+	
+	<!-- profile: photo, name, age -->
+	<uk.co.jasonfry.android.tools.ui.SwipeView   
+		android:id="@+id/swipe_view"
+		android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        >
+       	
+	<LinearLayout 
+		style="@style/profileLayout"
+		android:id="@+id/babyprofile_1"
+		android:orientation="horizontal" 
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content" 
+		>
+		<!-- photo -->
+		<ImageView
+			style="@style/profilePic"
+			android:id="@+id/profile_pic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" 
+           />
+		<!-- name & ages -->
+		<LinearLayout 
+			style="@style/profileInfoLayout"
+			android:orientation="vertical" 
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			>
+			<!-- name -->
+			<TextView 
+				style="@style/profileName"
+				android:id="@+id/profile_name"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content" 
+				android:gravity="bottom" 
+				android:layout_weight="1"			
+				/>
+			<!-- chronological age -->
+			<LinearLayout
+				style="@style/profileChronologicalAgeLayout"
+				android:orientation="horizontal" 
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content" 
+				>
+				<TextView 
+					style="@style/profileChronologicalAge"
+					android:id="@+id/profile_chronological_age"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content" 
+					/>
+				<TextView 
+					style="@style/profileChronologicalAgeHeader"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					/>
+			</LinearLayout>
+			<!-- adjusted age -->
+			<LinearLayout 
+				android:orientation="horizontal" 
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content" 
+				>
+				<TextView 
+					style="@style/profileAdjustedAge"
+					android:id="@+id/profile_adjusted_age"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content" 
+					/>
+				<TextView 
+					style="@style/profileAdjustedAgeHeader"
+					android:id="@+id/profile_adjusted_age_header"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					/>
+			</LinearLayout>
+		</LinearLayout>	
+		<!-- mail icon -->
+		<RelativeLayout 
+			android:id="@+id/inbox_layout"
+			android:layout_width="wrap_content" 
+			android:layout_height="fill_parent"
+			android:gravity="bottom"
+			>
+			<ImageView 
+				android:id="@+id/inbox_background"
+				android:layout_width="60dip"
+				android:layout_height="45dip"
+				android:src="@drawable/envelope"
+				android:layout_alignParentRight="true"
+				android:layout_centerHorizontal="true"
+				>
+			</ImageView>
+			<ImageView 
+				android:id="@+id/inbox_exclaim"
+				android:layout_height="17dip" 
+				android:layout_width="7dip"
+				android:layout_marginRight="54dip"
+				android:layout_alignParentTop="true"
+				android:layout_alignParentRight="true"
+				android:background="@drawable/exclaimation_point"
+				>
+			</ImageView>
+			<RelativeLayout 
+				android:id="@+id/inbox_count_holder"
+				android:layout_alignParentRight="true"
+				android:layout_alignParentTop="true"
+				android:layout_width="20dip"
+				android:layout_height="20dip"
+				android:layout_marginTop="-5dip"
+				>
+				<ImageView 
+					android:id="@+id/inbox_bubble"
+					android:layout_height="fill_parent"
+					android:layout_width="fill_parent"
+					android:layout_centerInParent="true"
+					android:background="@drawable/white_circle"
+					>
+				</ImageView>
+				<TextView 
+					android:id="@+id/inbox_count"
+					android:padding="0dip"
+					android:layout_margin="0dip"
+					android:gravity="center_vertical|center_horizontal"
+					android:layout_width="fill_parent"
+					android:layout_height="fill_parent"
+					android:textColor="@color/black"
+					android:layout_centerInParent="true"
+					android:textSize="11sp"
+					android:text="24"
+					/>
+			</RelativeLayout>
+		</RelativeLayout>
+	</LinearLayout>
+	
+	<!-- ========================= BABY #2 =========================  -->
+	<LinearLayout 
+		style="@style/profileLayout"
+		android:id="@+id/babyprofile_2"
+		android:orientation="horizontal" 
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content" 
+		>
+		<!-- photo -->
+		<ImageView
+			style="@style/profilePic"
+			android:id="@+id/profile_pic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" 
+           />
+		<!-- name & ages -->
+		<LinearLayout 
+			style="@style/profileInfoLayout"
+			android:orientation="vertical" 
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			>
+			<!-- name -->
+			<TextView 
+				style="@style/profileName"
+				android:id="@+id/profile_name"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content" 
+				android:gravity="bottom" 
+				android:layout_weight="1"			
+				/>
+			<!-- chronological age -->
+			<LinearLayout 
+				style="@style/profileChronologicalAgeLayout"
+				android:orientation="horizontal" 
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content" 
+				>
+				<TextView 
+					style="@style/profileChronologicalAge"
+					android:id="@+id/profile_chronological_age"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content" 
+					/>
+				<TextView 
+					style="@style/profileChronologicalAgeHeader"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					/>
+			</LinearLayout>
+			<!-- adjusted age -->
+			<LinearLayout 
+				android:orientation="horizontal" 
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content" 
+				>
+				<TextView 
+					style="@style/profileAdjustedAge"
+					android:id="@+id/profile_adjusted_age"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content" 
+					/>
+				<TextView 
+					style="@style/profileAdjustedAgeHeader"
+					android:id="@+id/profile_adjusted_age_header"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					/>
+			</LinearLayout>
+		</LinearLayout>	
+		<!-- mail icon -->
+		<RelativeLayout 
+			android:id="@+id/inbox_layout"
+			android:layout_width="wrap_content" 
+			android:layout_height="fill_parent"
+			android:gravity="bottom"
+			>
+			<ImageView 
+				android:id="@+id/inbox_background"
+				android:layout_width="60dip"
+				android:layout_height="45dip"
+				android:src="@drawable/envelope"
+				android:layout_alignParentRight="true"
+				android:layout_centerHorizontal="true"
+				>
+			</ImageView>
+			<ImageView 
+				android:id="@+id/inbox_exclaim"
+				android:layout_height="17dip" 
+				android:layout_width="7dip"
+				android:layout_marginRight="54dip"
+				android:layout_alignParentTop="true"
+				android:layout_alignParentRight="true"
+				android:background="@drawable/exclaimation_point"
+				>
+			</ImageView>
+			<RelativeLayout 
+				android:id="@+id/inbox_count_holder"
+				android:layout_alignParentRight="true"
+				android:layout_alignParentTop="true"
+				android:layout_width="20dip"
+				android:layout_height="20dip"
+				android:layout_marginTop="-5dip"
+				>
+				<ImageView 
+					android:id="@+id/inbox_bubble"
+					android:layout_height="fill_parent"
+					android:layout_width="fill_parent"
+					android:layout_centerInParent="true"
+					android:background="@drawable/white_circle"
+					>
+				</ImageView>
+				<TextView 
+					android:id="@+id/inbox_count"
+					android:padding="0dip"
+					android:layout_margin="0dip"
+					android:gravity="center_vertical|center_horizontal"
+					android:layout_width="fill_parent"
+					android:layout_height="fill_parent"
+					android:textColor="@color/black"
+					android:layout_centerInParent="true"
+					android:textSize="11sp"
+					android:text="24"
+					/>
+			</RelativeLayout>
+		</RelativeLayout>
+	</LinearLayout>
+	
+	</uk.co.jasonfry.android.tools.ui.SwipeView>
+	<!-- /profile: photo, name, age -->
+
+	<View 
+		style="@style/greySeparator_thin"
+		/>
+	
+	<!-- menu tiles -->
+	<LinearLayout 
+		style="@style/tilesLayout"
+		android:orientation="horizontal" 
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content" 
+		>
+		<GridView
+			style="@style/gridLayout"
+			android:id="@+id/tiles_gridview"
+			android:layoutAnimation="@anim/grid_fade"
+			android:layout_width="fill_parent" 
+			android:layout_height="fill_parent"
+		    />
+    </LinearLayout>
+</LinearLayout>
+
+

@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+
+Copyright 2012, Karen P. Tang, Sen Hirano
+
+This file is part of the Estrellita project
+
+This program is free software: you can redistribute it and/or
+modify it under the terms of the GNU Lesser General Public License 
+as published by the Free Software Foundation, either version 3 of 
+the License, or any later version.
+
+This program is distributed in the hope that it will be useful, 
+but WITHOUT ANY WARRANTY; without even the implied warranty of 
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the 
+GNU General Public License for more details. 
+
+You should have received a copy of the GNU Lesser General Public 
+License along with this program. If not, see
+		http://www.gnu.org/licenses/
+
+-->
+<resources>   
+	<!-- general -->
+	<string name="app_name">Estrellita</string>
+	<string name="save_button_footer">Add</string>
+	<string name="delete_button_footer">Delete</string>
+	<string name="action_required">Action Required</string>
+	<string name="missing_info">Missing information</string>
+	<string name="delete_this">Delete this?</string>
+	<string name="really_delete">Are you sure you want to delete this?</string>
+	<string name="submit_this">Submit this?</string>
+	<string name="check_this">Problem with data entry</string>
+	<string name="photo_saved">photo has been saved</string>
+	<string name="photo_deleted">photo has been deleted</string>
+	<string name="photo_tip">to keep this photo, click the save icon.\nto discard this photo, click the delete icon.</string>
+	<string name="save_photo_and_continue">save &amp; continue</string>
+	<string name="no_save_photo_and_continue">don\'t save &amp; continue</string>
+	<string name="you_finished">You\'re done!</string>
+	<string name="tip">Tip</string>
+	<string name="what_to_do">What would you like to do?</string>
+	<string name="submit">Submit</string>
+	<string name="OK">OK</string>
+	<string name="cancel">Cancel</string>
+	<string name="dateSliderTitle">Selected date</string>
+	
+    <!-- home -->
+    <string name="chronological_age">(chronological)</string>
+    <string name="adjusted_age"> (adjusted)</string>
+    <string name="last_updated">last update: </string>
+    <string name="messages">messages: </string>  
+	<string name="next_survey">next survey</string>
+	<!-- this dictates the order of the tiles -->
+	<string-array name="tile_names">
+		<item>appointments</item>
+		<item>diapers</item>
+		<item>bonding</item>
+		<item>baby moods</item>
+		<item>custom charts</item>
+		<item>my moods</item>
+		<item>weight</item>
+		<item>my surveys</item>
+	</string-array>
+	
+	<!-- appointments -->
+	<string name="appointments_tabs_activity">EstrellitaAppointmentsTabs</string>
+	<string name="upcoming_appointments_list_activity">EstrellitaUpcomingAppointmentsList</string>
+	<string name="past_appointments_list_activity">EstrellitaPastAppointmentsList</string>
+	<string name="appointment_activity">EstrellitaAppointment</string>
+	<string name="upcoming_appointments">Upcoming</string>
+	<string name="past_appointments">Past</string>
+	<string name="doctors_name">Doctor\'s Name</string>
+	<string name="doctors_specialty">Specialty</string>
+	<string name="appointment_date">Date</string>
+	<string name="appointment_time">Time</string>
+	<string name="appointment_location">Location</string>
+	<string name="doctors_phone">Phone #</string>
+	<string name="appointment_notes">Notes</string>
+	<string name="appointment_concerns">use these icons as reminders for any special concerns you want to ask about</string>
+	<string name="appointment_notes_hint">Before this appointment, write down any questions or concerns you want to talk to the doctor about. After this appointment, write down notes about the appointment, including advice or suggestions that the doctor might have said.</string>
+	<string-array name="specialties">
+		<item>Cardiac</item>
+		<item>EDAC</item>
+		<item>Endocrinology</item>
+		<item>Gastroenterology (GI)</item>
+		<item>Hematology</item>
+		<item>Metabolic</item>
+		<item>Neurology</item>
+		<item>Neurosurgery</item>
+		<item>Opthalmology</item>
+		<item>Pediatrician</item>
+		<item>Pulmonary</item>
+		<item>Other</item>
+	</string-array> 
+	<string name="pre_appt_survey">Please answer some questions before this appointment</string>
+	<string name="post_appt_survey">Please answer some questions about this appointment</string>
+	
+	<!-- diapers -->
+	<string name="unsaved_photo_title">Unsaved Diaper Photo</string>
+	<string name="unsaved_diaper_photo">You have an unsaved photo. Would you like to\n- save the photo &amp; update the diaper count, or\n- update the diaper count, without saving the photo?</string>
+	<string name="update_yesterdays_diapers">Would you like to update yesterday\'s diaper count?</string>
+	
+	<!-- bonding -->
+	<string name="update_bonding_question">What activities have you done with your baby today?</string>
+	
+	<!-- baby moods -->
+	<string name="babymood_notes_hint">Jot down any thoughts about why you think your baby might be feeling this way.</string>
+	<string name="babymood_notes_hint_short">Jot down why your baby might be feeling this way.</string>
+	<string name="babymood_0_label">not fussy</string>
+	<string name="babymood_10_label">fussy</string>
+	
+	<!-- custom charts -->
+	<string name="custom_chart_units_hint">&lt;optional&gt; what units would you use to describe this data? (ex: lbs, ozs)</string>
+	<string name="optional">&lt;optional&gt;</string>
+	
+	<!-- weight -->
+	<string name="too_many_weight_reports">Please wait until next week to report your baby\'s weight.</string>
+	<string name="missing_weight_photo">You must take a photo of the baby on the scale before updating the weight.</string>
+	<string name="check_weight">Please double-check the weight values!</string>
+	<string name="submit_weight">Did you enter the weight in correctly: </string>
+	<string name="unsaved_weight_photo">You have an unsaved photo. Would you like to save the photo &amp; update the weight?</string>
+	
+	<!-- surveys -->
+	<string name="start_of_survey_prompt">Please allocate at least 10 minutes to take this surveys. Click "next" to start the survey, or click "cancel" to take the survey later.</string>
+	<string name="end_of_survey_prompt">Thank you for taking this survey!</string>
+	<string name="too_early_for_survey">Please wait to take this survey on </string>
+	<string name="call_st_josephs_short">It is very common to feel down after having a baby. Some women find it helpful to talk to someone. Your survey responses suggest that you might be at risk for post-partum depression. You may find it helpful to talk to someone at the Caring for Women with Post-Partum Depression program at St. Joseph\'s Hospital. They can be reached during normal business hours at\n(714) 771-8101.</string>
+	<string name="call_st_josephs_long">It is very common to feel down after having a baby. Some women find it helpful to talk to someone. Your survey responses suggest that you might be at risk for post-partum depression. You may find it helpful to talk to someone at the Caring for Women with Post-Partum Depression program at St. Joseph\'s Hospital. They can be reached during normal business hours at (714) 771-8101. You can also find out more about post-partum depression at http://postpartum.net.gravitatehosting.com/Get-the-Facts.aspx.</string>
+	<string name="st_josephs_phone_number">7147718101</string>
+	
+	<!-- wall -->
+	<string name="update_status">Add a new message</string>
+	<string name="comment_on">You are commenting on: </string>
+	
+	<!-- reminders -->
+	<string name="pre_appt_reminder">Pre-Appointment Survey</string>
+	<string name="appt_reminder">Appointment Reminder</string>
+	<string name="post_appt_reminder">Post-Appointment Survey</string>
+	<string name="stjoseph_call_reminder">Remember to take care of yourself. You need to be healthy so that you can take care of your family. Your survey responses suggest that you might be at risk for post-partum depression. Please consider calling St. Joseph\'s or another health professional.</string>
+	<string name="stjoseph_call_reminder_option1">Call St. Joseph\'s</string>
+	<string name="stjoseph_call_reminder_option2">Call a health professional in my address book</string>
+	<string name="stjoseph_call_reminder_option3">I\'ve already called</string>
+	<string name="stjoseph_call_reminder_option4">I\'ll call later</string>
+	<string name="stjoseph_call_reminder_prompt">Remember to take care of yourself. You need to be healthy so that you can take care of your family. Your survey responses suggest that you might be at risk for post-partum depression. Please consider calling St. Joseph\'s or another health professional.</string>
+	
+	<!-- app widget -->
+	<string name="yes">Yes</string>
+	<string name="no">No</string>
+	<string name="replies">Replies</string>
+	<string name="next_appt">Next Appt</string>
+	<string name="load_more">Load More</string>
+	<string name="changeChild">Change Child</string>
+	<string name="chooseChild">Choose Child</string>
+	
+	<!-- preferences -->
+	<string name="baby_uci_email">baby@ics.uci.edu</string>
+	<string name="baby_gmail_email">ucifitbaby@gmail.com</string>
+	<string name="estrellita_db_attachment_subject">backupestrellita.db attachment</string>
+	<string name="alogcat_attachment_subject">alogcat attachment</string>
+	<string name="baby_google_voice">(949) 264-2229</string>
+	<string name="contact_study_coordinators_subject">question for study coordinators</string>
+</resources>

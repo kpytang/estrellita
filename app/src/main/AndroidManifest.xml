@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+
+Copyright 2012, Karen P. Tang, Sen Hirano
+
+This file is part of the Estrellita project
+
+This program is free software: you can redistribute it and/or
+modify it under the terms of the GNU Lesser General Public License 
+as published by the Free Software Foundation, either version 3 of 
+the License, or any later version.
+
+This program is distributed in the hope that it will be useful, 
+but WITHOUT ANY WARRANTY; without even the implied warranty of 
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the 
+GNU General Public License for more details. 
+
+You should have received a copy of the GNU Lesser General Public 
+License along with this program. If not, see
+		http://www.gnu.org/licenses/
+
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="edu.uci.ics.star.estrellita"
+      android:versionCode="2"
+      android:versionName="2.0">
+    <uses-sdk android:minSdkVersion="8" />
+    <uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.CAMERA" />
+	<uses-permission android:name="android.permission.READ_PHONE_STATE" />
+	<uses-permission android:name="android.permission.CALL_PHONE" />
+	<uses-permission android:name="android.permission.READ_CONTACTS" />
+	<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+	<uses-permission android:name="android.permission.WAKE_LOCK" />
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
+	<uses-permission android:name="android.permission.VIBRATE"></uses-permission>
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"></uses-permission>
+    
+    <application 
+    	android:icon="@drawable/icon" 
+    	android:label="@string/app_name"
+    	android:theme="@android:style/Theme.NoTitleBar"
+    	>
+        <activity 
+        	android:name=".EstrellitaTiles"
+            android:label="@string/app_name"
+			android:screenOrientation="portrait"
+			android:launchMode="singleTask" 
+			>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            
+            <intent-filter>
+                <action android:name="estrellita.intent.action.CHANGE_CONTENT" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity 
+        	android:name=".LoginActivity"
+            />
+       	<activity 
+        	android:name=".activity.Wall"
+            android:label="Wall"
+            />
+        <activity 
+        	android:name=".activity.AppointmentsTabs"
+            android:label="@string/appointments_tabs_activity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask" 
+            >
+            <intent-filter>
+                <action android:name="estrellita.intent.action.CHANGE_CONTENT" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            </activity>
+        <activity 
+        	android:name=".activity.AppointmentForm"
+            android:label="@string/appointment_activity"
+            />
+        <activity 
+        	android:name=".activity.ViewAppointment"
+            android:label="@string/appointment_activity"
+            android:screenOrientation="portrait"
+            />
+       	<activity 
+        	android:name=".activity.DiapersOverview"
+            android:label="EstrellitaDiapers"
+            android:screenOrientation="portrait"
+            />
+        <activity 
+        	android:name=".activity.DiaperForm"
+            android:label="EstrellitaDiaperForm"
+            android:screenOrientation="portrait"
+            />
+        <activity 
+        	android:name=".activity.BondingOverview"
+            android:label="EstrellitaBonding"
+            android:screenOrientation="portrait"
+            />
+        <activity 
+        	android:name=".activity.BondingForm"
+            android:label="EstrellitaBondingForm"
+            android:screenOrientation="portrait"
+            />
+        <activity 
+        	android:name=".activity.BabyMoodsOverview"
+            android:label="EstrellitaBabyMoods"
+            android:screenOrientation="portrait"
+            />
+        <activity 
+        	android:name=".activity.BabyMoodForm"
+            android:label="EstrellitaBabyMoodForm"
+            />
+        <activity 
+        	android:name=".activity.CustomChartsOverview"
+            android:label="EstrellitaCustomCharts"
+            android:screenOrientation="portrait"
+            />
+        <activity 
+        	android:name=".activity.CustomChartOverview"
+            android:label="EstrellitaCustomChart"
+            android:screenOrientation="portrait"
+            />
+        <activity 
+        	android:name=".activity.CustomTableOverview"
+            android:label="EstrellitaCustomTable"
+            android:screenOrientation="portrait"
+            />
+		<activity  
+        	android:name=".activity.CustomChartForm"
+            android:label="EstrellitaCustomNewChart"
+            />
+        <activity  
+        	android:name=".activity.CustomChartValueForm"
+            android:label="EstrellitaCustomNewChartValue"
+            />
+       	<activity 
+        	android:name=".activity.WeightOverview"
+            android:label="EstrellitaWeights"
+            android:screenOrientation="portrait"
+            />
+		<activity
+        	android:name=".activity.WeightForm"
+            android:label="EstrellitaWeightForm"
+            android:screenOrientation="portrait"
+            />
+        <activity 
+        	android:name=".activity.MyMoodsOverview"
+            android:label="EstrellitaMyMoods"
+            android:screenOrientation="portrait"
+            />
+        <activity 
+       		android:name=".activity.MyMoodForm"
+            android:label="EstrellitaMoodForm"
+            />
+        <activity 
+        	android:name=".activity.SurveysOverview"
+            android:label="EstrellitaSurveys"
+            android:screenOrientation="portrait"
+            />
+        <activity 
+        	android:name=".activity.SurveyForm"
+            android:label="EstrellitaSurveys"
+            />
+        <activity 
+        	android:name=".activity.CallReminderForm"
+            android:label="EstrellitaCallReminder"
+            />
+		<activity android:name=".activity.EstrellitaPreferences" />
+		<activity android:name=".activity.ContactInfo" />
+		<activity android:name=".sharedprefs.PhotoLauncher" />
+            
+  		<!-- Updating stuff -->
+		<receiver android:name=".updateservice.OnBootReceiver">
+			<intent-filter>
+				<action android:name="android.intent.action.BOOT_COMPLETED" />
+				<action android:name="edu.uci.ics.estrellita.SYNC" />
+			</intent-filter>
+		</receiver>
+		
+		<receiver android:name=".updateservice.OnAlarmReceiver">
+		</receiver>
+		
+		<service android:name=".updateservice.SyncService" />
+		
+		<!-- Appwidget Stuff -->
+		<receiver android:name=".widget.MainWidgetProviderWide"
+		android:label="Estrellita - Wide">
+			<intent-filter>
+				<action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+				<action android:name="edu.uci.ics.estrellita.UPDATE_WIDGET_WIDE" />
+			</intent-filter>
+			
+			<meta-data android:name="android.appwidget.provider"
+				android:resource="@xml/main_appwidget_info_wide" />
+		</receiver>
+		
+		<activity android:name=".widget.MainWidgetConfiguration">
+			<intent-filter>
+				<action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />
+			</intent-filter>
+		</activity>
+			<activity android:name=".widget.MainWidgetConfigurationWide">
+			<intent-filter>
+				<action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />
+			</intent-filter>
+		</activity>
+            
+    </application>
+</manifest>

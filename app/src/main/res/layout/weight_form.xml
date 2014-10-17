@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+
+Copyright 2012, Karen P. Tang, Sen Hirano
+
+This file is part of the Estrellita project
+
+This program is free software: you can redistribute it and/or
+modify it under the terms of the GNU Lesser General Public License 
+as published by the Free Software Foundation, either version 3 of 
+the License, or any later version.
+
+This program is distributed in the hope that it will be useful, 
+but WITHOUT ANY WARRANTY; without even the implied warranty of 
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the 
+GNU General Public License for more details. 
+
+You should have received a copy of the GNU Lesser General Public 
+License along with this program. If not, see
+		http://www.gnu.org/licenses/
+
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:orientation="vertical"	
+	>
+	<include 
+       	layout="@layout/activity_header"
+       	android:layout_width="fill_parent"
+       	android:layout_height="@dimen/activityHeaderHeight"
+       	/>
+  	<View
+		style="@style/greySeparator_thin"
+		/>
+	<RelativeLayout
+		android:layout_width="fill_parent"
+		android:layout_height="210dip"
+		>
+		<FrameLayout
+			android:layout_width="125dip" 
+	        android:layout_height="wrap_content"
+			android:layout_alignParentTop="true"
+			android:layout_alignParentRight="true"
+			>
+			<TextView
+				android:layout_width="fill_parent"
+				android:layout_height="210dip"
+				/>
+			<edu.uci.ics.star.estrellita.customview.ScrollList 
+				android:id="@+id/scale_list"
+		        android:layout_width="fill_parent" 
+		        android:layout_height="wrap_content"
+				android:dividerHeight="0dip"
+				android:listSelector="@android:color/transparent"
+		        >		
+			</edu.uci.ics.star.estrellita.customview.ScrollList>
+			<LinearLayout
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:layout_toLeftOf="@id/scale_list"
+				android:orientation="vertical"	
+				>
+				<TextView
+					android:layout_width="fill_parent"
+					android:layout_height="70dip"
+					/>
+				<View
+					style="@style/greySeparator_thin"
+					/>
+			</LinearLayout>
+		</FrameLayout>
+		<LinearLayout
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignParentTop="true"
+			android:layout_alignParentLeft="true"
+			android:orientation="vertical"	
+			>
+			<TextView
+				android:id="@+id/scale_lbs"
+				android:layout_width="wrap_content"
+				android:layout_height="70dip"
+				android:layout_marginLeft="50dip"
+				android:textSize="35sp"
+				android:gravity="bottom"
+				/>
+			<TextView
+				android:id="@+id/scale_ozs"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginLeft="50dip"
+				android:textSize="35sp"
+				android:gravity="top"
+				/>
+		</LinearLayout>
+	</RelativeLayout>
+	<RelativeLayout
+		android:layout_width="fill_parent"
+		android:layout_height="150dip"
+		android:paddingTop="@dimen/spacer_large"
+		android:paddingBottom="@dimen/spacer_large"
+		>
+		<ImageView
+			style="@style/retakeButton2"
+	    	android:id="@+id/camera_icon"
+	   		android:layout_width="wrap_content"
+			android:layout_height="100dip"
+			android:layout_alignParentTop="true"
+			android:layout_alignParentRight="true"
+			android:gravity="center_vertical"
+			android:src="@drawable/camera_icon"
+	        />
+        <FrameLayout
+        	style="@style/photoButton"
+        	android:id="@+id/photo_frame"
+        	android:layout_width="150dip"
+			android:layout_height="150dip"
+			android:layout_alignParentTop="true"
+			android:layout_alignParentBottom="true"
+			android:layout_toLeftOf="@id/camera_icon"
+			android:clickable="true"
+			>
+	        <ImageView
+				android:id="@+id/current_photo"
+		   		android:layout_width="fill_parent"
+				android:layout_height="fill_parent"
+				/>
+			<TextView
+		   		android:id="@+id/previous_photos"
+		   		android:layout_width="fill_parent"
+				android:layout_height="fill_parent"
+				android:gravity="center"
+				android:text="see previous photos" 
+				android:textSize="@dimen/font_small"
+				/> 
+		</FrameLayout>
+		<ImageView
+			style="@style/saveButton"
+	    	android:id="@+id/save_icon"
+	   		android:layout_width="@dimen/icon_large"
+			android:layout_height="150dip"
+			android:layout_alignParentTop="true"
+			android:layout_alignParentBottom="true"
+			android:layout_toLeftOf="@id/photo_frame"
+			android:gravity="center_vertical"
+			android:src="@drawable/save_icon"
+	        />
+	</RelativeLayout>
+	<include 
+       	layout="@layout/button_footer"
+       	android:layout_width="fill_parent"
+       	android:layout_height="@dimen/buttonFooterHeight"
+       	/> 
+</LinearLayout>

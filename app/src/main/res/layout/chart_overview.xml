@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+
+Copyright 2012, Karen P. Tang, Sen Hirano
+
+This file is part of the Estrellita project
+
+This program is free software: you can redistribute it and/or
+modify it under the terms of the GNU Lesser General Public License 
+as published by the Free Software Foundation, either version 3 of 
+the License, or any later version.
+
+This program is distributed in the hope that it will be useful, 
+but WITHOUT ANY WARRANTY; without even the implied warranty of 
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the 
+GNU General Public License for more details. 
+
+You should have received a copy of the GNU Lesser General Public 
+License along with this program. If not, see
+		http://www.gnu.org/licenses/
+
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:padding="5dp"
+	>
+    <include 
+		layout="@layout/activity_header"
+		android:layout_width="fill_parent"
+		android:layout_height="@dimen/activityHeaderHeight"
+		/>
+	<View
+		style="@style/greySeparator_thin"
+		/>
+	<include 
+		layout="@layout/button_header"
+		android:layout_width="fill_parent"
+		android:layout_height="@dimen/buttonHeaderHeight"
+		/>
+	<View
+		style="@style/greySeparator_thin"
+		/>
+	<RelativeLayout
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:padding="5dp">
+		<Button
+			android:id="@+id/chart_time_scale_prev"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignParentLeft="true"
+			android:layout_centerVertical="true"
+			android:layout_marginTop="@dimen/spacer_small"
+			android:background="@drawable/btn_previous" />
+		<Button
+			android:id="@+id/chart_time_scale_next"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignParentRight="true"
+			android:layout_centerVertical="true"
+			android:layout_marginTop="@dimen/spacer_small"
+			android:background="@drawable/btn_next" />
+		<LinearLayout 
+			android:id="@+id/chart_time_scale"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:orientation="vertical"
+			android:gravity="center"
+			android:layout_centerInParent="true"
+			android:layout_marginTop="@dimen/spacer_small"
+			android:background="@drawable/btn_with_thin_border"
+			>
+			<TextView
+				android:id="@+id/chart_time_scale_label"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:gravity="center"
+				android:textSize="@dimen/font_regular" 
+				/>
+			<TextView
+				android:id="@+id/chart_time_scale_dates"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:gravity="center"
+				android:textSize="@dimen/font_small" 
+				/>
+		</LinearLayout>
+	</RelativeLayout>
+	<LinearLayout 
+		android:id="@+id/chart"
+		android:orientation="vertical"
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+		android:padding="5dp">
+	</LinearLayout>
+</LinearLayout>
